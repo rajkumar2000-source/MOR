@@ -239,25 +239,43 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
 <script>
     // Initialize Animations
     AOS.init({ duration: 1000, once: true });
     gsap.from("#title", { y: -50, opacity: 0, duration: 1.5, ease: "power2.out" });
 
-    // Weather API (Open-Meteo) with robust error handling
-    fetch('https://api.open-meteo.com/v1/forecast?latitude=32.28&longitude=77.17&current_weather=true')
-    .then(res => {
-        if (!res.ok) throw new Error();
-        return res.json();
-    })
-    .then(data => {
-        const w = data.current_weather;
-        document.getElementById('weather').innerHTML = `🏔️ Current Temp: <b>${w.temperature}°C</b> | Wind: ${w.windspeed} km/h | ❄️ Perfect for a Retreat`;
-    })
-    .catch(() => {
-        document.getElementById('weather').innerHTML = "🏔️ Welcome to Manali! The mountains are calling.";
-    });
+    // Function to fetch weather based on coordinates
+    function getLocalWeather(lat, lon, label = "Your Location") {
+        fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
+        .then(res => {
+            if (!res.ok) throw new Error();
+            return res.json();
+        })
+        .then(data => {
+            const w = data.current_weather;
+            document.getElementById('weather').innerHTML = `📍 ${label} | Temp: <b>${w.temperature}°C</b> | Wind: ${w.windspeed} km/h | 🏔️ Explore Manali Next!`;
+        })
+        .catch(() => {
+            document.getElementById('weather').innerHTML = "🏔️ Welcome! The mountains are calling.";
+        });
+    }
+
+    // Request User Location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                // Success: Use user's actual location
+                getLocalWeather(position.coords.latitude, position.coords.longitude, "Local Weather");
+            },
+            () => {
+                // Denied/Error: Fallback to Manali coordinates
+                getLocalWeather(32.28, 77.17, "Manali Weather");
+            }
+        );
+    } else {
+        // Browser doesn't support Geolocation: Fallback to Manali
+        getLocalWeather(32.28, 77.17, "Manali Weather");
+    }
 </script>
 
 </body>
