@@ -7,98 +7,92 @@
     <meta name="robots" content="index, follow">
 
     <title>Manali Outdoor Retreat | Luxury Stay in Burwa by Yatraverse</title>
-    <meta name="description" content="Experience serene luxury at Manali Outdoor Retreat in Burwa. Features 5 cozy attic rooms, premium suites with balconies, and panoramic Himalayan views. Just 3km from Solang Valley.">
-    <meta name="keywords" content="Manali Outdoor Retreat, Yatraverse Manali, Luxury hotels in Burwa, Best stay near Solang Valley, Attic rooms Manali, Rooms with mountain view Manali">
-    <meta name="author" content="Yatraverse">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://manalioutdoorretreat.in/">
-    <meta property="og:title" content="Manali Outdoor Retreat - Luxury Stays in Burwa">
-    <meta property="og:description" content="Panoramic balconies, lush gardens, and signature attic stays. Wake up to the majestic Himalayas.">
-    <meta property="og:image" content="https://manalioutdoorretreat.in/og-image.jpg">
-
-    <link rel="canonical" href="https://manalioutdoorretreat.in/">
+    <meta name="description" content="Experience serene luxury at Manali Outdoor Retreat in Burwa. Features cozy attic rooms, premium suites with balconies, and panoramic Himalayan views. Just 3km from Solang Valley.">
     <link rel="icon" type="image/png" href="images/favicon.svg">
-
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="image/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
     <style>
-        :root { --gold: #d4af37; --dark: #0b0f1a; --glass: rgba(255, 255, 255, 0.05); }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: var(--dark); color: #fff; scroll-behavior: smooth; overflow-x: hidden; }
-
-        /* Centered Header with Logo */
-        header { 
-            position: fixed; 
-            width: 100%; 
-            top: 0; 
-            padding: 0 0; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            background: rgba(33,54,55,1); 
-            backdrop-filter: blur(10px); 
-            z-index: 1000; 
-            border-bottom: 1px solid rgba(212,175,55,0.1); 
+        :root { 
+            --gold: #d4af37; 
+            --dark: #0b0f1a; 
+            --glass: rgba(255, 255, 255, 0.03); 
+            --border: rgba(212, 175, 55, 0.2);
         }
-        .logo-img { height: 100px; margin-bottom: 1px; transition: 0.3s; }
-        nav { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; }
-        nav a { color: #fff; text-decoration: none; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; padding: 5px 10px; }
-        nav span { color: var(--gold); opacity: 0.4; }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body { background: var(--dark); color: #fff; overflow-x: hidden; line-height: 1.6; }
+
+        /* Header Navigation */
+        header { 
+            position: fixed; width: 100%; top: 0; 
+            display: flex; flex-direction: column; align-items: center; 
+            background: rgba(11, 15, 26, 0.95); backdrop-filter: blur(15px); 
+            z-index: 1000; border-bottom: 1px solid var(--border); 
+        }
+        .logo-img { height: 80px; padding: 10px; transition: 0.3s; }
+        nav { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 5px; padding-bottom: 10px; }
+        nav a { color: #fff; text-decoration: none; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; padding: 5px 12px; transition: 0.3s; }
         nav a:hover { color: var(--gold); }
+        nav span { color: var(--gold); opacity: 0.3; font-size: 10px; }
 
         /* Hero Section */
-        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; }
-        .hero video { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.6; }
-        .hero-content { z-index: 1; padding: 20px; margin-top: 100px; }
-        .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); font-family: 'Playfair Display'; margin-bottom: 15px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.1rem; margin-bottom: 30px; letter-spacing: 3px; font-weight: 300; }
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; }
+        .hero video { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.5; }
+        .hero-content { z-index: 1; padding: 20px; }
+        .hero h1 { font-size: clamp(2.2rem, 8vw, 4.5rem); font-family: 'Playfair Display'; margin-bottom: 10px; text-shadow: 0 4px 20px rgba(0,0,0,0.8); }
+        .hero p { font-size: 1rem; margin-bottom: 30px; letter-spacing: 4px; font-weight: 300; opacity: 0.9; }
 
-        .btn { background: var(--gold); padding: 14px 35px; color: #000; text-decoration: none; font-weight: 600; border-radius: 2px; transition: 0.3s; display: inline-block; border: none; cursor: pointer; }
-        .btn:hover { background: #fff; transform: translateY(-3px); }
+        .btn { background: var(--gold); padding: 14px 35px; color: #000; text-decoration: none; font-weight: 600; border-radius: 2px; transition: 0.3s; display: inline-block; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+        .btn:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
-        /* Content Sections */
-        section { padding: 100px 10%; }
-        h2 { text-align: center; color: var(--gold); font-family: 'Playfair Display'; font-size: 2.8rem; margin-bottom: 45px; }
-        .desc { max-width: 900px; margin: 0 auto 60px; text-align: center; line-height: 1.8; opacity: 0.9; font-size: 1.1rem; }
+        /* Layout Sections */
+        section { padding: 80px 8%; }
+        h2 { text-align: center; color: var(--gold); font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 40px; }
+        .desc { max-width: 800px; margin: 0 auto 50px; text-align: center; opacity: 0.8; font-size: 1.05rem; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); padding: 35px; border-radius: 15px; transition: 0.4s; position: relative; overflow: hidden; }
-        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
-        .card h3 { color: var(--gold); margin-bottom: 15px; font-family: 'Playfair Display'; font-size: 1.6rem; }
-        .card img { width: 100%; height: 230px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; border: 1px solid rgba(212,175,55,0.2); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.08); padding: 25px; border-radius: 12px; transition: 0.4s; position: relative; }
+        .card:hover { border-color: var(--gold); transform: translateY(-5px); background: rgba(255,255,255,0.05); }
+        .card img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+        .card h3 { color: var(--gold); margin-bottom: 10px; font-family: 'Playfair Display'; font-size: 1.4rem; }
+        .card p { font-size: 0.9rem; opacity: 0.8; }
 
-        .badge { position: absolute; top: 15px; right: 15px; background: var(--gold); color: #000; font-size: 10px; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; z-index: 5; }
+        .badge { position: absolute; top: 15px; right: 15px; background: var(--gold); color: #000; font-size: 9px; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; z-index: 5; }
 
         /* Weather Bar */
-        .weather-bar { background: rgba(212,175,55,0.1); padding: 20px; text-align: center; border-radius: 50px; max-width: 550px; margin: 40px auto; border: 1px solid var(--gold); font-weight: 500; font-size: 0.95rem; }
+        .weather-bar { background: rgba(212, 175, 55, 0.05); padding: 15px; text-align: center; border-radius: 50px; max-width: 600px; margin: 0 auto 40px; border: 1px solid var(--border); font-size: 0.9rem; }
 
-        /* Footer & Contact Decor */
-        footer { background: rgba(33,54,55,1); padding: 10px 1px; text-align: center; border-top: 1px solid var(--glass); }
-        .whatsapp { position: fixed; bottom: 10px; right: 30px; background: #25D366; padding: 18px; border-radius: 50%; z-index: 1001; box-shadow: 0 10px 20px rgba(0,0,0,0.3); text-decoration: none; font-size:  22px; transition: 0.3s; }
+        /* Footer */
+        footer { background: #05070a; padding: 60px 20px 30px; text-align: center; border-top: 1px solid var(--border); }
+        .footer-quote { font-family: 'Playfair Display'; font-style: italic; font-size: 1.3rem; color: var(--gold); margin-bottom: 25px; opacity: 0.9; }
+        .footer-sep { width: 40px; height: 1px; background: var(--gold); margin: 0 auto 25px; opacity: 0.4; }
+        
+        /* Contact/Floating */
+        .whatsapp { position: fixed; bottom: 25px; right: 25px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1001; box-shadow: 0 10px 25px rgba(0,0,0,0.4); text-decoration: none; font-size: 28px; transition: 0.3s; }
         .whatsapp:hover { transform: scale(1.1); }
 
-        /* Responsive Fixes */
         @media (max-width: 768px) {
             section { padding: 60px 5%; }
-            .logo-img { height: 45px; }
-            nav a { font-size: 11px; padding: 5px 6px; }
-            nav span { display: none; }
-            h2 { font-size: 2.2rem; }
+            .logo-img { height: 60px; }
+            nav a { font-size: 10px; padding: 4px 8px; }
+            h2 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="images/logo.png" alt="Manali Outdoor Retreat Logo" class="logo-img">
+    <img src="image/logo.png" alt="Manali Outdoor Retreat Logo" class="logo-img">
     <nav>
         <a href="#home">Home</a><span>|</span>
-        <a href="#about">About Us</a><span>|</span>
-        <a href="#rooms">Luxury Stays</a><span>|</span>
+        <a href="#about">About</a><span>|</span>
+        <a href="#rooms">Stays</a><span>|</span>
         <a href="#gallery">Gallery</a><span>|</span>
         <a href="#nearby">Nearby</a><span>|</span>
         <a href="#contact">Contact</a>
@@ -106,30 +100,31 @@
 </header>
 
 <section class="hero" id="home">
-    <video autoplay muted loop playsinline poster="images/gallery1.jpg">
-        <source src="images/background-video.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline poster="62602.jpg">
+        <source src="My movie 1.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
         <h1 id="title">Manali Outdoor Retreat</h1>
         <p>WHERE MOUNTAINS MEET YOUR SOUL</p>
-        <a href="#rooms" class="btn">Explore Our Stays</a>
+        <a href="#rooms" class="btn">Book Your Escape</a>
     </div>
 </section>
+
 <section id="about" data-aos="fade-up">
     <h2>Our Himalayan Story</h2>
     <p class="desc">
-        Manali Outdoor Retreat by Yatraverse is a sanctuary where rugged Himalayan beauty meets refined hospitality. Located in the serene village of <b>Burwa on Shanag Road</b>, we offer an escape from the tourist bustle. Surrounded by lush apple orchards and snow-capped peaks, our retreat blends traditional wood architecture with modern luxury.
+        A sanctuary where rugged Himalayan beauty meets refined hospitality. Located in the serene village of <b>Burwa on Shanag Road</b>, we offer a peaceful escape surrounded by lush apple orchards and snow-capped peaks.
     </p>
     <div class="grid">
         <div class="card">
-            <img src="garden-view.jpg" alt="Garden Area">
-            <h3>Lush Lawns & Gardens</h3>
-            <p>Our manicured gardens feature seasonal blooms like tulips—the perfect spot for morning yoga or evening tea under the stars.</p>
+            <img src="82047.jpg" alt="Garden Area">
+            <h3>Lush Lawns</h3>
+            <p>Our manicured gardens are the perfect spot for morning yoga or evening tea under the stars.</p>
         </div>
         <div class="card">
-            <img src="images/balcony-view.jpg" alt="Balcony View">
-            <h3>Panoramic Balconies</h3>
-            <p>Every room is designed to bring the mountains inside. Enjoy 360-degree views of the Dhauladhar range from your private deck.</p>
+            <img src="82045.jpg" alt="Floral View">
+            <h3>Nature's Bloom</h3>
+            <p>Experience the seasonal beauty of Himalayan flora right at your doorstep.</p>
         </div>
     </div>
 </section>
@@ -139,83 +134,54 @@
     <div class="grid">
         <div class="card">
             <span class="badge">Modern</span>
-            <img src="images/deluxe-room.jpg" alt="Deluxe Room">
+            <img src="76913.jpg" alt="Superior Deluxe">
             <h3>Superior Deluxe</h3>
-            <p>Elegant interiors with warm wooden flooring. Perfect for couples seeking a modern yet cozy mountain ambiance.</p>
+            <p>Elegant interiors with warm wooden flooring and premium mountain-facing comfort.</p>
         </div>
         <div class="card">
-            <span class="badge">Spacious</span>
-            <img src="images/suite-room.jpg" alt="Suite Room">
-            <h3>Suite Room with Balcony</h3>
-            <p>The ultimate luxury offering. Includes a separate seating area, premium linens, and a massive balcony overlooking the Beas Valley.</p>
+            <span class="badge">Panoramic</span>
+            <img src="76914.jpg" alt="Suite with Balcony">
+            <h3>Suite with Balcony</h3>
+            <p>Features floor-to-ceiling windows framing the majestic Dhauladhar range.</p>
         </div>
         <div class="card">
             <span class="badge">Signature</span>
-            <img src="images/attic-room.jpg" alt="Attic Room">
+            <img src="76915.jpg" alt="Attic Room">
             <h3>Cozy Attic Rooms</h3>
-            <p>Our signature experience. Rustic slanting wooden ceilings and a "top-of-the-world" view from your private attic balcony.</p>
+            <p>Our signature slanting wooden ceilings for a true "top-of-the-world" mountain experience.</p>
         </div>
     </div>
 </section>
 
 <section id="gallery" data-aos="fade-up">
     <h2>The Retreat Gallery</h2>
-    <div class="grid">
-        <div class="card"><img src="images/gallery1.jpg" alt="Exterior View"></div>
-        <div class="card"><img src="images/gallery2.jpg" alt="Lawn Bonfire"></div>
-        <div class="card"><img src="images/gallery3.jpg" alt="Snow Landscape"></div>
-        <div class="card"><img src="images/gallery4.jpg" alt="Night Ambiance"></div>
-        <div class="card"><img src="images/gallery5.jpg" alt="Hotel Exterior"></div>
-    </div>
-</section>
-<section id="nearby" data-aos="fade-up">
-    <h2>Explore the Valley</h2>
-    <p class="desc">Stay in Burwa to bypass Manali traffic and reach these iconic and hidden gems faster.</p>
+    <p class="desc">A glimpse of our property through the seasons.</p>
     
     <div class="grid">
-        <div class="card">
-            <span class="badge">3 KM</span>
-            <h3>Solang Valley</h3>
-            <p>The adventure hub of Himachal. Famous for Paragliding, Zorbing, and the ropeway to Mt. Phatru.</p>
-        </div>
-        <div class="card">
-            <span class="badge">16 KM</span>
-            <h3>Atal Tunnel & Sissu</h3>
-            <p>Drive through the world's longest tunnel to witness the golden landscapes and waterfalls of Lahaul Valley.</p>
-        </div>
-        <div class="card">
-            <span class="badge">4 KM</span>
-            <h3>Anjani Mahadev</h3>
-            <p>A hidden spiritual trek from Solang leading to a massive natural ice Shivalinga and a 100ft waterfall.</p>
-        </div>
-
-        <div class="card" style="border-color: rgba(212,175,55,0.4)">
-            <span class="badge" style="background: #fff;">OFFBEAT</span>
-            <h3>Sethan (Igloo Village)</h3>
-            <p>15 km away. A restricted Buddhist hamlet offering the best stargazing and winter Igloo stays in India.</p>
-        </div>
-        <div class="card" style="border-color: rgba(212,175,55,0.4)">
-            <span class="badge" style="background: #fff;">OFFBEAT</span>
-            <h3>Jana Waterfall</h3>
-            <p>35 km away. A scenic drive to a local heritage spot famous for traditional 'Siddu' and mountain thalis.</p>
-        </div>
-        <div class="card" style="border-color: rgba(212,175,55,0.4)">
-            <span class="badge" style="background: #fff;">OFFBEAT</span>
-            <h3>Sajla Waterfalls</h3>
-            <p>12 km away. A peaceful pine forest walk leading to a hidden pool—perfect for a private nature picnic.</p>
-        </div>
-    </div>
-
-    <div style="margin-top: 50px; text-align: center; background: var(--glass); padding: 30px; border-radius: 15px; border: 1px dashed var(--gold);">
-        <h3 style="color: var(--gold); font-family: 'Playfair Display'; margin-bottom: 10px;">Day Trip: Tirthan Valley & Jalori Pass</h3>
-        <p style="font-size: 0.9rem; opacity: 0.8; max-width: 700px; margin: 0 auto;">
-            Explore the UNESCO World Heritage 'Great Himalayan National Park' (90km). Trek to the sacred <b>Serolsar Lake</b> or enjoy trout fishing in the pristine Tirthan river.
-        </p>
+        <div class="card"><img src="82046.jpg" alt="Exterior View" loading="lazy"></div>
+        <div class="card"><img src="76918.jpg" alt="Hotel Architecture" loading="lazy"></div>
+        <div class="card"><img src="76916.jpg" alt="Guest Room View" loading="lazy"></div>
+        
+        <div class="card"><img src="62602.jpg" alt="Snow Peaks" loading="lazy"></div>
+        <div class="card"><img src="62604.jpg" alt="Winter Snowfall" loading="lazy"></div>
+        <div class="card"><img src="62109.jpg" alt="Snowy Retreat" loading="lazy"></div>
+        <div class="card"><img src="62108.jpg" alt="Burwa Winter" loading="lazy"></div>
+        <div class="card"><img src="82044.jpg" alt="Entrance" loading="lazy"></div>
     </div>
 </section>
+
+<section id="nearby" data-aos="fade-up">
+    <h2>Explore the Valley</h2>
+    <div class="grid">
+        <div class="card"><h3>Solang Valley</h3><p>3 KM away. The adventure hub for Paragliding and Skiing.</p></div>
+        <div class="card"><h3>Atal Tunnel</h3><p>16 KM away. Your gateway to the stunning Lahaul Valley.</p></div>
+        <div class="card"><h3>Sethan Village</h3><p>Offbeat. Best for stargazing and winter Igloo stays.</p></div>
+    </div>
+</section>
+
 <section id="contact" data-aos="fade-up">
-    <h2>Direct Booking & Weather</h2>
-    <div class="weather-bar" id="weather">🏔️ Loading mountain weather...</div>
+    <h2>Direct Booking</h2>
+    <div class="weather-bar" id="weather">🏔️ Gathering mountain weather...</div>
     
     <div class="grid">
         <div class="card" style="text-align:center">
@@ -223,7 +189,7 @@
             <p>📍 Shanag Road, Burwa, Manali,<br>Himachal Pradesh — 175103</p>
         </div>
         <div class="card" style="text-align:center">
-            <h3>Call For Reservations</h3>
+            <h3>Reservations</h3>
             <p>📞 +91 93178 67100<br>📞 +91 93179 67100</p>
             <br>
             <a href="https://wa.me/919317867100" class="btn">WhatsApp Booking</a>
@@ -232,8 +198,10 @@
 </section>
 
 <footer>
-    <p>© 2026 Manali Outdoor Retreat by Yatraverse</p>
-    <p style="font-size: 0.75rem; color: #666; margin-top: 15px; letter-spacing: 1px;">MANALIOUTDOORRETREAT.IN</p>
+    <p class="footer-quote">"You have left your memories behind, the mountain will miss you."</p>
+    <div class="footer-sep"></div>
+    <p>© <span id="year"></span> Manali Outdoor Retreat by Yatraverse</p>
+    <p style="font-size: 0.7rem; color: #444; margin-top: 10px; letter-spacing: 2px;">MANALIOUTDOORRETREAT.IN</p>
 </footer>
 
 <a href="https://wa.me/919317967100" class="whatsapp" title="Chat with us">💬</a>
@@ -241,41 +209,29 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script>
-    // Initialize Animations
     AOS.init({ duration: 1000, once: true });
     gsap.from("#title", { y: -50, opacity: 0, duration: 1.5, ease: "power2.out" });
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Function to fetch weather based on coordinates
-    function getLocalWeather(lat, lon, label = "Your Location") {
+    function getLocalWeather(lat, lon, label = "Manali") {
         fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
-        .then(res => {
-            if (!res.ok) throw new Error();
-            return res.json();
-        })
+        .then(res => res.json())
         .then(data => {
             const w = data.current_weather;
-            document.getElementById('weather').innerHTML = `📍 ${label} | Temp: <b>${w.temperature}°C</b> | Wind: ${w.windspeed} km/h | 🏔️ Explore Manali Next!`;
+            document.getElementById('weather').innerHTML = `📍 ${label} | Temp: <b>${w.temperature}°C</b> | Wind: ${w.windspeed} km/h | 🏔️ Adventure awaits!`;
         })
         .catch(() => {
-            document.getElementById('weather').innerHTML = "🏔️ Welcome! The mountains are calling.";
+            document.getElementById('weather').innerHTML = "🏔️ The mountains are calling.";
         });
     }
 
-    // Request User Location
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
-            (position) => {
-                // Success: Use user's actual location
-                getLocalWeather(position.coords.latitude, position.coords.longitude, "Local Weather");
-            },
-            () => {
-                // Denied/Error: Fallback to Manali coordinates
-                getLocalWeather(32.28, 77.17, "Manali Weather");
-            }
+            (pos) => getLocalWeather(pos.coords.latitude, pos.coords.longitude, "Your Location"),
+            () => getLocalWeather(32.28, 77.17, "Manali")
         );
     } else {
-        // Browser doesn't support Geolocation: Fallback to Manali
-        getLocalWeather(32.28, 77.17, "Manali Weather");
+        getLocalWeather(32.28, 77.17, "Manali");
     }
 </script>
 
